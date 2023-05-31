@@ -1,18 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   line-height: 1.75;
+  font-family: $font-paragraph;
 }
 
 h1, h2, h3 {
-  line-height: 1.3;
-  margin: 0;
+  color: $color-title;
+  font-family: $font-title;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: $font-size-xxxl;
+  margin: $margin--title;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-md;
 }
 
 p {
-  margin: 0;
-  color: $color-button-primary;
+  font-size: $font-size-base;
+  color: $color-text;
+  margin: $margin--text;
 }
 
 small {
-  color: $color-button-primary;
+font-size: $font-size-sm;
+color: $color-text;
+margin: $margin--small;
 }
