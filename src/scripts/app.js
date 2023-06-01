@@ -9,7 +9,9 @@ const containeranimation = document.querySelector(".container");
 window.addEventListener("load", () => {
     //Ajout de l"animation "slide" au chargement de la page
     transition.classList.add("slide");
+    //Vérification de fin d'animation de la transition
     transition.addEventListener ("animationend", () => {
+        //Ajout de l'animation sur le main (rend le site blanc lors de la transition entre les pages)
         containeranimation.classList.add("bodyanimation");  
     })
     //Suppression de l'animation "slide" après 1,5s
@@ -18,6 +20,23 @@ window.addEventListener("load", () => {
     }, 1500);
 })
 
+//BURGER MENU
+const navLink = document.querySelectorAll('.navigation__link');
+const burger = document.querySelector(".navigation__burger");
+const navMenu = document.querySelector(".navigation__list");
+
+burger.addEventListener("click", () => {
+    console.log("oui");
+    burger.classList.toggle("activeNav");
+    navMenu.classList.toggle("activeBurger");
+});
+
+document.querySelectorAll(".navigation__link").forEach((link) =>
+  link.addEventListener("click", () => {
+    burger.classList.remove("activeNav");
+    navMenu.classList.remove("activeBurger");
+  })
+);
 
 //TIMER
 //Création de la date de fin
