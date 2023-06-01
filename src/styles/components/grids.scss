@@ -1,0 +1,316 @@
+.hero{
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    // grid-template-rows: repeat(4, auto) 1fr; 
+    gap: 0px 8px; 
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__title {
+        grid-area: 1 / 2 / 2 / 7;
+    }
+
+    &__report {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__choice {
+        grid-area: 3 / 2 / 4 / 7;
+    }
+
+    &__btn {
+        &--documentation {
+            grid-area: 4 / 3 / 5 / 6;
+        }
+
+        &--discover {
+            grid-area: 5 / 3 / 6 / 6;
+        }
+    }
+}
+
+.user {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__img {
+        grid-area: 3 / 3 / 4 / 6;
+    }
+
+    &__text {
+        &--meet {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+
+        &--drink {
+            grid-area: 5 / 2 / 6 / 7;  
+        }
+    }
+
+    &__btn {
+        grid-area: 6 / 3 / 7 / 6;
+    }
+}
+
+.problem {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__img {
+        grid-area: 3 / 3 / 4 / 6;
+    }
+
+    &__text {
+        &--js {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+
+        &--learn {
+            grid-area: 5 / 2 / 6 / 7;  
+        }
+    }
+
+    &__btn {
+        grid-area: 6 / 3 / 7 / 6;
+    }
+}
+
+.hypotheses {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__img {
+        grid-area: 3 / 3 / 4 / 6;
+    }
+
+    &__text {
+        &--game {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+
+        &--questionning {
+            grid-area: 5 / 2 / 6 / 7;  
+        }
+    }
+
+    &__btn {
+        grid-area: 6 / 3 / 7 / 6;
+    }
+}
+
+.fonctionnality {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__img {
+        grid-area: 3 / 3 / 4 / 6;
+    }
+
+    &__text {
+
+        &--website {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+
+        &--learning {
+            grid-area: 5 / 2 / 6 / 7;
+        }
+
+        &--fonctionnality {
+            grid-area: 6 / 2 / 7 / 7;
+        }
+    }
+
+    &__btn {
+        grid-area: 7 / 3 / 8 / 6;
+    }
+}
+
+.study {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__img {
+        grid-area: 3 / 3 / 4 / 6;
+    }
+
+    &__text {
+        grid-area: 4 / 2 / 5 / 7;
+    }
+
+    &__btn {
+        grid-area: 5 / 3 / 6 / 6;
+    }
+}
+
+.presentation {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__timer {
+        grid-area: 3 / 2 / 4 / 8;
+    }
+
+    &__img {
+        grid-area: 4 / 2 / 5 / 7;
+    }
+
+    &__text {
+        grid-area: 5 / 2 / 6 / 7;  
+    }
+
+    &__btn {
+        grid-area: 6 / 3 / 7 / 6;
+    }
+}
+
+.timer {
+    display: grid; 
+    grid-template-columns: 0.5fr 1.8fr 0.3fr 1.8fr 0.4fr 1.7fr 0.4fr 1.6fr 0.5fr; 
+    grid-template-rows: 0.5fr repeat(2, 1.5fr) 0.5fr; 
+    gap: 8px 8px; 
+    justify-items: center;
+    //Chiffres
+    &__number{
+        &--day {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        &--hour {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+        &--minutes {
+            grid-area: 2 / 6 / 3 / 7;
+        }
+
+        &--seconds {
+            grid-area: 2 / 8 / 3 / 9;
+        }
+    }
+
+    //Nom
+    &__name {
+        &--day {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        &--hour {
+            grid-area: 3 / 4 / 4 / 5;
+        }
+
+        &--minutes {
+            grid-area: 3 / 6 / 4 / 7;
+        }
+
+        &--seconds {
+            grid-area: 3 / 8 / 4 / 9;
+        }
+    }
+        
+    //:
+    &__separation {
+        &--first {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        &--seconde {
+            grid-area: 2 / 5 / 3 / 6;
+        }
+
+        &--third {
+            grid-area: 2 / 7 / 3 / 8;
+        }
+    }
+
+}
+
+.conclusion {
+    display: grid; 
+    grid-template-columns: 16px repeat(5, 1fr) 32px; 
+    gap: 0px 16px;
+    margin: $margin--section;
+    // height: 100vh;
+
+    &__small {
+        grid-area: 1 / 2 / 2 / 6;
+    }
+
+    &__subtitle {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    &__text {
+        grid-area: 3 / 2 / 4 / 7; 
+    }
+
+    &__img {
+        grid-area: 4 / 2 / 5 / 7;
+    }
+}
