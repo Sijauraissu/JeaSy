@@ -18,7 +18,7 @@
     0% {
         opacity: 1;
         left: -100vw;
-        z-index: 100;
+        z-index: 1000;
     }
 
     75% {
@@ -29,7 +29,7 @@
     100% {
         opacity: 0;
         left: 0;
-        z-index: 100;
+        z-index: 1000;
     }
 }
 

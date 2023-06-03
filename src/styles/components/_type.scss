@@ -30,13 +30,23 @@ h2 {
 }
 
 h3 {
-  font-size: $font-size-md;
+  font-size: $font-size-lg;
+  margin: $margin--thirdtitle;
 }
 
 p {
   font-size: $font-size-base;
   color: $color-text;
   margin: $margin--text;
+}
+
+li {
+  list-style-type: none;
+  margin: $margin--small;
+}
+
+a {
+  text-decoration: none;
 }
 
 small {
@@ -53,6 +63,36 @@ button {
   border-radius: 8px;
   color: $color-text-third;
   background-color: transparent;
+}
+
+.line {
+  height: 3px;
+  background-color: $color-block;
+  margin: $margin--line;
+}
+
+section {
+  padding : $padding--section;
+}
+
+.activesection{
+  color: red;
+}
+
+//SCROLLBAR
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-background;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-block;
+  border-radius: 20px;
+  border: 3px solid $color-block;
 }
 
 //TRANSITION
@@ -77,9 +117,18 @@ button {
 
 //NAVIGATION
 .navigation {
-  color: $color-text-secondary;
   width: 100%;
   height: 4rem;
+  position: fixed;
+  background: linear-gradient(180deg, rgba(252,243,238,1) 0%, rgba(0,0,0,0) 100%);
+  z-index: 100;
+
+  &__container {
+    color: $color-text-secondary;
+    background-color: $color-block-secondary;
+    position: fixed;
+    width: 100%;
+  }
 
   &__list {
     width: 100%;
@@ -95,11 +144,15 @@ button {
     background-color: $color-block;
   }
 
+  &__link {
+    color: $color-text-secondary;
+  }
+
   &__burger {
     display: block;
     position: absolute;
-    left: calc(100% - 50px);
-    top: 30px;
+    left: calc(100% - 80px);
+    top : 12px;
   }
 
 
@@ -108,30 +161,30 @@ button {
     height: 7px;
     display: block;
     padding: 0;
-    margin: 6px;
-    -webkit-transition: 0.5s;
+    margin: 6px 0px;
     transition: 0.5s;
     background-color: $color-block;
   }
 }
 
-.activeBurger {
+.activeNav {
   left: 0;
   z-index: 100;
+  opacity: 1;
 }
 
-.activeNav {
+.activeBurger {
   z-index: 100;
 
 }
-.activeNav .navigation__bar:nth-child(2) {
+.activeBurger .navigation__bar:nth-child(2) {
   opacity: 0;
 }
-.activeNav .navigation__bar:nth-child(1) {
+.activeBurger .navigation__bar:nth-child(1) {
   transform: translateY(10px) rotate(-315deg);
   background: $color-block-secondary;
 }
-.activeNav .navigation__bar:nth-child(3) {
+.activeBurger .navigation__bar:nth-child(3) {
   transform: translateY(-16px) rotate(-45deg);
   background: $color-block-secondary;
 }
@@ -154,19 +207,29 @@ button {
 }
 
 //PRESENTATION
-.presentation {
-  &__timer {
+
+.timer {
   color: $color-text-secondary;
   background-color: $color-button-primary;
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 10% 100%);
   height: 100px;
-  }
-}
-
-.timer {
 
 
   &__name {
     font-size: $font-size-sm;
+  }
+}
+
+//PAGE DE DOCUMENTATION 
+.userdoc {
+  &__quoteblock {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+
+  &__quote {
+    text-align: center;
+    
   }
 }

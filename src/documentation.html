@@ -23,7 +23,190 @@
         <div class="cover"></div>
     </div>
 
-    <h1>test</h1>
+    <aside class="navigation">
+      <nav class="navigation__container">
+        <ul class="navigation__list">
+          <li class="navigation__el"><a class="navigation__link" href="">Intro</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Var User = Found</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Uncaught Error : JavaScript</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Function (Hypothèses)</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Fonctionnalités ++</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Recherches</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Présentation.Start</a></li>
+          <li class="navigation__el"><a class="navigation__link" href="">Conclusion</a></li>
+          <button class="navigation__el navigation__button"><a class="navigation__link" href="index.html">Documentation</a></button>
+        </ul>
+      </nav>
+      <div class="navigation__burger">
+        <span class="navigation__bar"></span>
+        <span class="navigation__bar"></span>
+        <span class="navigation__bar"></span>
+      </div>
+    </aside>
+
+    <main class="container">
+      <section class="userdoc">
+        <h1 class="userdoc__title">JeaSy</h1>
+
+        <h2 class="userdoc__subtitle userdoc__subtitle--user">Utilisateurs</h2>
+        <p class="userdoc__text userdoc__text--beginning">Plus les utilisateurs sont proches de vous et plus c’est facile de les contacter. C’est sur cette base que j’ai choisi de prendre les élèves de ma classe comme cible. Si l’un d’eux ne me répond pas, il me suffit de me déplacer jusqu’au banc d’à coté. J’ai d’abord interrogé des élèves de 2e année mais ayant beaucoup de connaissances en 3e, j’ai décidé de les inclure dans le projet.</p>
+        <img src="" alt="" class="userdoc__img userdoc__img--interview">
+        <p class="userdoc__text userdoc__text--interview">J’ai procédé de deux manières différentes. Avec un questionnaire conçu en classe et en discussion plus libre autour d’un verre. Le questionnaire permet de mieux cadrer l’interview et d’être sur de ne passer outre aucun point mais j’en ai appris beaucoup plus grâce au discussions libres. Parler de tout et de rien est parfois la meilleure manière d’en apprendre plus sur le sujet qui nous intéresse.</p>
+
+        <h3 class="userdoc__subsubtitle userdoc__subsubtitle--questions">Questionnaire</h3>
+        <p class="userdoc__text userdoc__text--help">Je n’ai jamais été fan des questionnaires linéaires mais je dois admettre qu’ils m’ont été d’une grande aide.</p>
+        <p class="userdoc__text userdoc__text--problems">En fonctionnant avec la méthode de l’entonnoir j’ai pu identifier des problèmes récurrents. Comme par exemple la barrière de la langue ou encore l’approche trop théorique. </p>
+        <img class="userdoc__img userdoc__img--explose" src="" alt="">
+        <p class="userdoc__text userdoc__text--coding">Certaines personnes m’ont également expliqué que des codes pris en ligne ne fonctionnaient pas chez eux. Je mets ce problème de coté vu que la faute peut être partagée entre la personne qui publie le code et celui qui le télécharge mais j’en tiendrai compte dans la confection de mon service.</p>
+
+        <div class="userdoc__line line"></div>
+
+        <h3 class="userdoc__subsubtitle userdoc__subsubtitle--drink">Boire un verre</h3>
+        <p class="userdoc__text userdoc__text--pub">J’ai également procédé à des interviews beaucoup moins conventionnelles faites non pas autour d’un questionnaire mais autour d’un verre. Je me suis posé avec quelques utilisateurs dans un bar et on a discuté calmement de tout et de rien.</p>
+        <img class="userdoc__img userdoc__img--drink" src="" alt="">
+        <p class="userdoc__text userdoc__text--toxicity"> Contrairement aux questionnaires, ce genre de discussion ne permet pas de rentrer en profondeur mais elle a d’autres avantages. En tournant autour du pot, j’ai pu en apprendre plus sur des problèmes qui n’ont pas été soulevés avant tels que la toxicité sur certains sites d’aide ou alors la non compréhension de certaines notions vue en cours.</p>
+
+        <div class="userdoc__quoteblock">
+          <p class="userdoc__text userdoc__text--surpised">J’ai été vraiment étonné par le nombre de personne me disant qu’elles ne pensaient pas pouvoir faire du JS. Une amie m’a dit lors d’une interview:</p>
+          <q class="userdoc__quote">C’est pas moi qui n’aiment pas le JS, c’est le JS qui ne m’aime pas !</q>
+          <p class="userdoc__text userdoc__text--idea">C’est cette phrase qui m’a confortée dans l’idée qu’il y avait quelque chose à creuser.</p>
+        </div>
+      </section>
+
+      <section class="problemdoc">
+        <h2 class="problemdoc__subtitle">Problèmes</h2>
+        <p  class="problemdoc__text problemdoc__text--questions">Grâce aux questionnaires créés en classe et à des séances de discussions improvisées autour d’un verre, j’ai pu me rendre compte que certains points revenaient souvent :</p>
+        <ul class="problemdoc__list">
+          <li class="problemdoc__el">Les sites d’aident sont en grandes majorités en anglais</li>
+          <li class="problemdoc__el">L’approche très théorique pose parfois problème à certains</li>
+          <li class="problemdoc__el">On a pas envie d’apprendre seul, chez soit</li>
+        </ul>
+
+        <div class="problemdoc__container">
+          <p class="problemdoc__text problemdoc__text--langage">L’un des problèmes rencontré reste la barrière de la langue. Ca parait assez évident mais l’anglais pose parfois problème dans la compréhension des réponses. Bien que la possibilité de traduire avec Google existe, ça n’empêche pas de passer à coté de petites subtilités.</p>
+          <p class="problemdoc__text problemdoc__text--learning">Certains étudiants se sont plaints que l’apprentissage du JavaScript hors des heures de cours était fastidieux. Les explications données ne sont pas toujours claires. Et malheureusement, on retrouve une grande communauté qui “trash” les novices lorsque ces derniers posent des questions jugées trop stupides.</p>
+          <p class="problemdoc__text problemdoc__text--sentence">J’ai pu tirer de mes interviews une phrase très importante qui résume à elle seule assez bien l’idée du projet. </p>
+          <img src="" alt="">
+
+          <div class="problemdoc__container">
+            <p>Apprendre, oui.</p>
+            <p>Mais pas seul !</p>
+          </div>
+
+          <p class="problemdoc__text problemdoc__text--javascript">C’est ainsi que je rangeais l’idée d’un jeu vidéo pour de bon et que je me lançais dans l’élaboration d’un site d’entraide tourné sur l’apprentissage du JavaScript.</p>
+        </div>
+      </section>
+       
+      <section class="hypothesesdoc">
+        <h2>Hypothèses</h2>
+        <p>Après avoir pivoté, je me suis assuré de mettre mes utilisateurs au centre du projet et de me focaliser sur l’aide que je pouvais leur apporter. C’est de cette mentalité qu’est née la première version de JeaSy. Et avec du recul, je me rends compte que ma première hypothèse, celle du jeu vidéo, n’aurait pas fonctionné.</p>
+        <img src="" alt="">
+      </section>
+      <p>Un site pour vous par vous. </p>
+      <p>Je me suis rappelé que durant mes interviews, certains de mes camarades m’avaient déclaré se débrouiller en JavaScript. Certains donnaient même déjà de petits coups de main par ci par là. Aider ses camarades. Voilà quelque chose qui rentre bien dans mes valeurs et dans celles d’un site d’entraide comme je l’imagine.</p>
+      </section>
+
+      <!-- SECTION FONCTIONNALITES -->
+      <section class="fonctionalitydoc">
+        <h2>Fonctionnalités</h2>
+        <h3>Salon vocal et vidéo</h3>
+        <p>La fonctionnalité principale de mon projet découle d’après-midi en vocal avec des amis. Ça nous arrive assez souvent de se connecter sur un chanel, de coder chacun de notre côté et de nous aider en cas de soucis. C’est de cette habitude qu’est tirée la fonctionnalité phare du projet. Des petits salons vocaux et vidéos qui permettront à qui le désire de se connecter et de travailler ensemble sur un projet ou un problème. Une petite pastille de couleur indiquera si la personne est en demande ou en proposition d’aide et il sera possible de régler la nombre maximum de participants.</p>
+        <img src="" alt="">
+
+        <h3>Gamifier l’entraide</h3>
+        <p>J'aimerais instaurer un système de “rank” qui n’aura pas pour but de créer une hiérarchie entre les membres mais de gamifier l’entraide. En aidant les autres membres vous pourrez gagner des niveaux puis des divisions.</p>
+        <img src="" alt="">
+        <p>Ce système, s’il ne crée pas de hiérarchie, permettra néanmoins de mettre en avant les membres actifs et serviables avec par exemples des badges ou des cosmétiques pour personnaliser son avatar.</p>
+
+        <div>
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+
+        <h3>Demande classique</h3>
+        <p>Il y aura aussi un système de demande plus traditionnel basé sous forme de questions réponses. C’est une fonctionnalité qui existe déjà mais qui est fondamentale. Ce système sera simplifié au maximum et composé de :</p>
+        <ul>
+          <li>Son pseudo</li>
+          <li>Le titre de la demande</li>
+          <li>Une description de son problème</li>
+          <li>Un endroit pour placer du code (le but est de l’avoir en couleur comme sur VS Code)</li>
+          <li>Un statut (Urgent - Réponse rapide - Pas urgent).</li>
+          <li>Un état (Fini ou en cours).</li>
+          <li>Des hashtags afin de permettre un système de filtre.</li>
+        </ul>
+        <div class="line"></div>
+        <p>Ce dernier point permettra un meilleur usage des filtres lors de l’archivage. Lorsqu’un code est fonctionnel et validé, il sera possible de l’épingler pour permettre de le retrouver. Ainsi, quelqu’un ayant un problème similaire ou besoin du code pourra facilement le retrouver dans l’historique et profiter des explications de tous les élèves ou des professeurs.</p>
+  
+        <h3>Pour le futur</h3>
+        <p>Pourquoi ne pas imaginer pouvoir lier le compte de l’école à celui de JeaSy et y développer des fonctionnalités avec l’aide des professeurs. On pourrait par exemple imaginer que les exercices de Monsieur Terrasse pourrait se faire depuis JeaSy.</p>
+      </section>
+
+      <!-- SECTION RECHERCHES -->
+      <section class="studydoc">
+        <h2 class="studydoc__subtitle">Recherches</h2>
+        <h3 class="studydoc__subsubtitle studydoc__subsubtitle--langage">La barrière de la langue</h3>
+        <p>Il existe beaucoup de sites d’aide permettant de poser des questions sur le JavaScript. Que se soit Stack Overflow, W3School, des forums de discussion ou encore des comptes instagram. Tous sont en anglais. Ce qui en soit est tout à fait normal. Le code étant international et s’écrivant en majorité en anglais.</p>
+        <p>Je trouve dommage que des sites d’aides ou d’apprentissage ne puissent pas être dans notre langue native. Casser la barrière de la langue permettrait à certains de sauter le pas et d’oser demander et comprendre.</p>
+        <img src="" alt="">
+
+        <h3 class="studydoc__subsubtitle studydoc__subsubtitle--codepen">Codepen</h3>
+        <p>Il existe aussi des sites comme Codepen ou alors “Stackblitz” qui ont comme possibilité de coder et de poster du code éditable par tous. </p>
+        <p>Mais dans toute cette mine d’or se cache aussi beaucoup de codes mal conçus ou dans des langages que nous n'apprenons pas en cours. C’est pourquoi je veux me concentrer sur le JavaScript et mettre les autres langages de côté.</p>
+        <p>Je ne compte pas rivaliser avec eux ou du moins, pas dans un premier temps. J’adore le fait de pouvoir éditer directement le code de quelqu’un et ces sites sont remplis d’un tas de bonnes idées et inspirations géniales.</p>
+        <img src="" alt="">
+        <p>Je prévois tout de même pour le futur une fonctionnalité permettant de coder ensemble en ligne dans un éditeur de code.</p>
+
+        <h3 class="studydoc__subsubtitle studydoc__subsubtitle--discord">Discord</h3>
+        <p>Discord reste un concurrent sérieux aussi. C’est grâce à ce réseau que j’ai eu l’idée de la fonctionnalité principale. En effet, nous avons toujours fait nos sessions de code en privé ou sur les groupes de la classe. J’ai tout de même relevé 2 problèmes au fait de coder via discord.</p>
+        <img src="" alt="">
+        <p>Certains ont peur de déranger ou sont intimidés quand le vocal se remplit. Il est d’ailleurs parfois difficile de s’entendre.</p>
+        <img src="" alt="">
+        <p>L’archivage des discussions posent aussi problème. Bien que nous ayons un chan où nous ne postions que le code, il était parfois compliqué de retrouver avec exactitude ce que nous cherchions.</p>
+
+        <h3 class="studydoc__subsubtitle studydoc__subsubtitle--ia">Et l'IA dans tout ça ?</h3>
+        <p>ChatGPT. Voici un concurrent sérieux. Je fais partie des personnes médisantes face à l'Intelligence Artificiel. Je trouve ça fascinant mais je pense qu’il faut instaurer une limite. Lorsque je vois ChatGPT en œuvre, je suis ébahi. Correction de code, réponse rapide et complète pour la théorie, capacité de coder pour nous. </p>
+        <img src="" alt="">
+        <p>Je pense sérieusement que ce genre de système va faire le tri entre les vrais et les faux développeurs. Mais à l’instar de l’apparition de la calculatrice chez les mathématiciens, ChatGPT et tous les autres sites du genre ne sont que des outils. Et mal utilisé, il ne prodigue que de mauvais conseils.</p>
+
+        <h3 class="studydoc__subsubtitle studydoc__subsubtitle--mdn">MDN</h3>
+        <img src="" alt="">
+        <p>Mdn, ce site répertorie toute la théorie dont on peut avoir besoin ainsi que de très bons exemples. Qui plus est dans une multitude de langues. Je ne pense pas pouvoir faire quelque chose de mieux qu’eux. Du coup, je compte m’en inspirer pour le refaire à ma sauce. On ne peut pas toujours tout améliorer.</p>
+        <button>Consulter les analyses détaillées</button>
+      </section>
+
+      <!-- SECTION PRESENTATION -->
+      <section class="presentationdoc">
+        <h2 class="presentationdoc__subtitle">Présentation</h2>
+
+        <div class="presentationdoc__timer timer">
+          <span class="timer__number timer__number--day">1</span>
+          <span class="timer__name timer__name--day">jours</span>
+          <span class="timer__separation timer__separation--first">:</span>
+          <span class="timer__number timer__number--hour">2</span>
+          <span class="timer__name timer__name--hour">heures</span>
+          <span class="timer__separation timer__separation--seconde">:</span>
+          <span class="timer__number timer__number--minutes">3</span>
+          <span class="timer__name timer__name--minutes">minutes</span>
+          <span class="timer__separation timer__separation--third">:</span>
+          <span class="timer__number timer__number--seconds">4</span>
+          <span class="timer__name timer__name--seconds">secondes</span>
+        </div>
+
+        <p class="presentationdoc__text presentationdoc__text--">J’ai toujours été assez à l’aise avec les exercices oraux. Mais ce n’est pas une raison pour penser que ça ira comme sur des roulettes. Il faut réussir à se démarquer. C’est pourquoi je compte commencer et finir fort.</p>
+        <p class="presentationdoc__text presentationdoc__text--">Le JavaScript n’est pas le langage le plus apprécié, j’aimerai montrer un code assez compliqué et interpeller l’assistance. Leur demander s’il ne trouve pas ça magnifique en sachant pertinemment qu’ils me donneront tort pour la plupart. J’aimerai réussir à les captiver dès le début de la présentation, à les faire rentrer dedans.</p>
+        <img src="" alt="">
+        <p class="presentationdoc__text presentationdoc__text--">Je continuerai en leur expliquant que le but de mon projet est de leur permettre à eux aussi d’aimer le dev et de s’amuser avec.</p>
+        <p class="presentationdoc__text presentationdoc__text--">Pour ce qui est de la conclusion, je pense partir sur une phrase un peu bateau dans le style de “”. Je veux finir sur une note positive et rappeler l'importance de travailler ensemble.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
 
 </body>
 </html>
