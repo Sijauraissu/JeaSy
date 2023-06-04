@@ -385,3 +385,199 @@
         grid-area: 16 / 1 / 17 / 8;
     }
 }
+
+.problemdoc {
+    display: grid; 
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr; 
+    gap: 0px 8px;
+
+    &__subtitle {
+        grid-area: 1 / 2 / 2 / 5;
+    }
+
+    &__text {
+        &--questions {
+            grid-area: 2 / 2 / 3 / 7;
+        }
+
+        //
+        &--langage {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        &--learning {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        &--sentence {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        &--javascript {
+            grid-area: 6 / 2 / 7 / 3;
+        }
+    }
+
+    &__list {
+        grid-area: 3 / 2 / 4 / 6;
+    }
+
+    &__container {
+        grid-area: 4 / 1 / 10 / 8;
+
+        display: grid; 
+        grid-template-columns: 0.3fr 5fr 0.3fr; 
+        gap: 0px 8px; 
+    }
+
+    &__quotecontainer {
+        grid-area: 5 / 1 / 6 / 4;
+    }
+
+    &__img {
+        grid-area: 5 / 1 / 6 / 4;
+    }
+}
+
+.hypothesesdoc {
+    display: grid; 
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr; 
+    gap: 0px 8px; 
+
+    &__subtitle {
+        grid-area: 1 / 2 / 2 / 5;
+    }
+
+    &__text {
+        &--pivot {
+            grid-area: 2 / 2 / 3 / 7;
+        }
+
+        &--friendly {
+            grid-area: 5 / 2 / 6 / 7;
+        }
+    }
+
+    &__img {
+        grid-area: 3 / 3 / 4 / 6;
+    }
+
+    &__quotecontainer {
+        grid-area: 4 / 1 / 5 / 8; 
+    }
+}
+
+
+.fonctionalitydoc {
+    display: grid; 
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr; 
+    gap: 0px 8px; 
+
+    &__subtitle {
+        grid-area: 1 / 2 / 2 / 5;
+    }
+
+    &__subsubtitle {
+        &--chat {
+            grid-area: 1 / 2 / 2 / 5;            
+        }
+
+        &--game {
+            grid-area: 5 / 2 / 6 / 6;
+        }
+
+        &--help {
+            grid-area: 10 / 2 / 11 / 6;
+        }
+
+        &--futur {
+            grid-area: 15 / 2 / 16 / 6;
+        }
+    }
+
+    &__img {
+        &--chat {
+            grid-area: 4 / 1 / 5 / 8;
+        }
+
+        &--blario {
+            grid-area: 7 / 3 / 8 / 6;
+        }
+    }
+
+    &__text {
+        &--chat {
+            grid-area: 3 / 2 / 4 / 7;
+        }
+
+        &--rank {
+            grid-area: 6 / 2 / 7 / 7;
+        }
+
+        &--hierarchy {
+            grid-area: 8 / 2 / 9 / 7;
+        }
+
+        &--help {
+            grid-area: 11 / 2 / 12 / 7;
+        }
+
+        &--filter {
+            grid-area: 14 / 2 / 15 / 7;
+        }
+
+        &--futur {
+            grid-area: 16 / 2 / 17 / 7;
+        }
+    }
+
+    &__list {
+        grid-area: 12 / 2 / 13 / 6;
+    }
+
+    &__rankinglist {
+        grid-area: 9 / 1 / 10 / 8;
+    }
+
+    &__line {
+        grid-area: 13 / 2 / 14 / 7;
+    }
+}
+
+
+
+.presentationdoc {
+    display: grid; 
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr; 
+    gap: 0px 8px; 
+
+    &__subtitle {
+        grid-area: 1 / 2 / 2 / 5;
+    }
+
+    &__timer {
+        grid-area: 2 / 2 / 3 / 8;
+    }
+
+    &__img {
+        grid-area: 5 / 3 / 6 / 6;
+    }
+
+    &__text {
+        &--oral {
+            grid-area: 3 / 2 / 4 / 7;
+        }
+
+        &--javascript {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+
+        &--mid {
+            grid-area: 6 / 2 / 7 / 7;
+        }
+
+        &--ending {
+            grid-area: 7 / 2 / 8 / 7;
+        }
+    }
+}
