@@ -112,15 +112,23 @@ if (navigation){
 }
 
 
-//Transition pour les images dans le header en version téléphone
+//SLIDER DES RANKS
+//Selection des images des ranks
 var IMGTransition = document.querySelectorAll(".fonctionalitydoc__rank");
+//Ajout dans une variable de la taille de l'écran
 var screensize = screen.width;
 
+//Création d'un if afin de savoir si il y a bien des images dans la page et ne pas faire d'erreur console
 if (IMGTransition) {
+    //Création d'une timeline en Gsap qui tourne à l'infini (-1)
     var tlIMG = new gsap.timeline({repeat: -1});
+
     tlIMG
-    .to(IMGTransition[0], { opacity: 1, duration: 1.5,x : -100 }, ">")
+    //1ère étape de l'animation, commence avec une opacité 0 à -100px de sa position initiale avec une durée de 1 seconde
+    .to(IMGTransition[0], { opacity: 0, duration: 1,x : -100 }, ">")
+    //2e étape de l'animation, opacité 1 à 0px de sa position initiale avec une durée de 2 secondes
     .to(IMGTransition[0], { opacity: 1, duration: 2, x : 0 }, ">")
+    //3e étape de l'animation, opacité 0 à +100px de sa position initiale avec une durée de 1 seconde et un delai de 1,5 seconde
     .to(IMGTransition[0], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
 
     .to(IMGTransition[1], { opacity: 0, duration: 1, x : -100}, ">")
@@ -147,5 +155,6 @@ if (IMGTransition) {
     .to(IMGTransition[6], { opacity: 1, duration: 2, x : 0 }, ">")
     .to(IMGTransition[6], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
 
-  tlIMG.play();
+    //Lancement de l'animation GSAP
+    tlIMG.play();
 }
