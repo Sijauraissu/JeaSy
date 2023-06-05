@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+
 //TRANSITION DE PAGE
 //Création d'une constante pour stocker la div de la transition
 const transition = document.querySelector(".transition")
@@ -24,12 +26,10 @@ window.addEventListener("load", () => {
 })
 
 //BURGER MENU
-//Création d'une constante pour stocker les liens de la navigation
-const navLink = document.querySelectorAll('.navigation__link');
 //Création d'une constante pour stocker le burger menu
 const burger = document.querySelector(".navigation__burger");
 //Création d'une constante pour stocker la liste des liens
-const navMenu = document.querySelector(".navigation__list");
+const navMenu = document.querySelector(".navigation__container");
 //Lors de la détection du click sur le bouton burger : 
 burger.addEventListener("click", () => {
     //Ajout de la classe activeNav sur le Burger Menu

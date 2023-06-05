@@ -154,9 +154,7 @@ body::-webkit-scrollbar-thumb {
     background-color: $color-block-secondary;
     position: fixed;
     width: 100%;
-  }
 
-  &__list {
     width: 100%;
     height: 100%;
     display: flex;
@@ -168,6 +166,20 @@ body::-webkit-scrollbar-thumb {
     transition: 0.5s;
     margin: 0 auto;
     background-color: $color-block;
+  }
+
+  &__list {
+    // width: 100%;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // position: fixed;
+    // left: 100%;
+    // transition: 0.5s;
+    // margin: 0 auto;
+    // background-color: $color-block;
   }
 
   &__link {
