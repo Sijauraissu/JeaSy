@@ -158,206 +158,30 @@ if (IMGTransition) {
     tlIMG.play();
 }
 
-//CHANGEMENT DE COULEUR DE BACKGROUND
-
-// const container = document.querySelector(".colorchange");
-// const body = document.querySelector(".container");
-// const presentation = document.querySelector(".presentationdoc");
-
-// var bgColor = "red";
-// var fontColor = "#110803";
-// var reversebgColor = "green";
-// var reversefontColor = "#FCF3EE";
-
-// const test1 = {
-//     section :document.querySelector(".colorchange"),
-//     bgColor: bgColor,
-//     fontColor: fontColor,
-// }
-
-// const test2 = {
-//     section :document.querySelector(".presentation"),
-//     bgColor: reversebgColor,
-//     fontColor: reversefontColor,
-// }
-
-// function setColors(curr, next) {
-//     let tl = gsap.timeline({ease: 'power2.in'});
-//     tl.to(container, {
-//         duration: 1,
-//         background: next.bgColor,
-//         color: next.fontColor,
-//         delay: -1
-//     });
-// }
-
-// gsap.set(body, {
-//     backgroundColor: bgColor,
-//     color: fontColor
-// });
-
-// gsap.to(body, {
-//     duration: 1,
-//     scrollTrigger: {
-//         trigger: container,
-//         markers: true,
-//         start: "top 70%",
-//         end: presentation,
-//         onEnter: () => setColors(test1, test2),
-//         onLeaveBack: () => setColors(test2, test1)
-//     }
-// });
-
-// const colorchange = document.querySelector(".studydoc__subtitle"); //trigger
-// const body = document.querySelector(".container"); //truc qui doit changer de couleur
-// const presentation = document.querySelector(".presentationdoc");
-
-// var bgColor = "yellow";
-// var fontColor ="green";
-// var bgColorReverse = "pink";
-// var fontColorReverse = "blue";
-
-// const main = {
-//     fonctionnalité : document.querySelector(".fonctionalitydoc"),
-//     bgColor : bgColor,
-//     fontColor : fontColor,
-// }
-
-// const reverse = {
-//     colorchange : document.querySelector(".colorchange"),
-//     bgColor : bgColorReverse,
-//     fontColor : fontColorReverse,
-// }
-
-// const end = {
-//    end : document.querySelector(".presentationdoc"),
-//     bgColor : bgColor,
-//     fontColor : fontColor,
-// }
-
-// function setColors (curr, next) {
-//         let tl = gsap.timeline({ease: 'power2.in'});
-
-//         tl.to(colorchange, {
-//         duration: 1,
-//         background: next.bgColor,
-//         color: next.fontColor,
-//         delay: -1
-//     });
-// }
-
-// gsap.set(body, {
-//     backgroundColor: main.bgColor,
-//     color: main.fontColor
-// });
-
-// gsap.to(reverse, {
-//     duration: 1,
-//     scrollTrigger: {
-//       trigger: reverse.section,
-//       markers: true,
-//       start: "top 70%",
-//       end: '+=100',
-//       onEnter: () => setColors(main, reverse),
-//       onLeaveBack: () => setColors(reverse, main)
-//     }
-// });
-
-// gsap.to(end.section, {
-//     duration: 1,
-//     scrollTrigger: {
-//       trigger: end.section,
-//       markers: true,
-//       start: "top 70%",
-//       end: '+=100',
-//       onEnter: () => setColors(reverse, end),
-//       onLeaveBack: () => setColors(end, reverse)
-//     }
-// });
-// const trigger = document.querySelector(".studydoc");
-// const main = document.querySelector(".container");
-
-// gsap.fromTo( main, {
-// 	backgroundColor: gsap.getProperty("main", "--dark")
-// }, {
-// 	scrollTrigger: {
-// 		trigger: trigger,
-// 		scrub: true,
-//         start: "top bottom",
-// 		end: "center bottom",
-//         markers: true,
-// 	},
-// 	backgroundColor: gsap.getProperty("main", "--light")
-// });
-
-// gsap.utils.toArray('section').forEach((section, i) => {
-// 	var bgColor = section.dataset.color;
-
-// 	gsap.from('.container', {
-// 		scrollTrigger: {
-// 			markers: true,
-// 			trigger: section,
-// 			start: 'top 10%',
-// 			end: 'bottom 10%',
-// 			// toggleActions: 'play reset play reset',
-// 		},
-// 		backgroundColor: `rgba(${bgColor}, 0.80)`,
-//         // backgroundColor: "red",
-// 		duration: 0.5,
-// 		onComplete:function() {
-// 		     console.log( bgColor );
-// 		}
-// 	});
-// });
-
-// gsap.to(".container", {
-//     scrollTrigger: ".colorchange",
-//     backgroundColor: "red"
-// });
-
-// window.addEventListener("load", function () {
-//     const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-//     scrollColorElems.forEach((colorSection, i) => {
-//       const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
-//       const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
-  
-//       ScrollTrigger.create({
-//         trigger: colorSection,
-//         scroller: ".container",
-//         start: "top 50%",
-//         onEnter: () =>
-//           gsap.to("body", {
-//             backgroundColor: colorSection.dataset.bgcolor,
-//             color: colorSection.dataset.textcolor,
-//             overwrite: "auto"
-//           }),
-//         onLeaveBack: () =>
-//           gsap.to("body", {
-//             backgroundColor: prevBg,
-//             color: prevText,
-//             overwrite: "auto"
-//           })
-//       });
-//     });
-//   });
-
+// CHANGEMENT DE COULEURS
+//Check sur la page pour charger l'animation après le DOM
 window.addEventListener ("load", () => {
+    //Création d'un tableau avec les différentes sections "colorchange"
     gsap.utils.toArray(".colorchange").forEach(function(el) {
 
+        //Création d'une variale pour stocker les data-colors (couleur du background) dans l'html
         var color = el.getAttribute("data-color");
+        //Création d'une variale pour stocker les data-fonts (couleur de la police) dans l'html
         var font = el.getAttribute("data-font");
         
+        //Création d'un scroll trigger
         ScrollTrigger.create({
-          trigger: el,
-          start:'top center',
-          end:'bottom center',
-          onEnter: () => gsap.to('main', {backgroundColor:color}, {color:font}), 
 
-          onLeave: () => gsap.to('main', {backgroundColor:color}, {color:font}),
+            trigger: el,
+            start:'top center',
+            end:'bottom center',
+            onEnter: () => gsap.to('main', {backgroundColor:color, duration:1}), 
 
-          onLeaveBack: () => gsap.to('main', {backgroundColor:color}, {color:font}),
+            onLeave: () => gsap.to('main', {backgroundColor:color, duration:1}),
+
+          onLeaveBack: () => gsap.to('main', {backgroundColor:color,duration:1}),
           
-          onEnterBack: () => gsap.to('main', {backgroundColor:color}, {color:font}), 
+          onEnterBack: () => gsap.to('main', {backgroundColor:color, duration:1}), 
 
           markers:true
         });
@@ -366,13 +190,13 @@ window.addEventListener ("load", () => {
             trigger: el,
             start:'top center',
             end:'bottom center',
-            onEnter: () => gsap.to('main, h2, h3', {color:font}), 
+            onEnter: () => gsap.to('main, h2, h3', {color:font, duration:1}), 
   
-            onLeave: () => gsap.to('main, h2, h3', {color:font}), 
+            onLeave: () => gsap.to('main, h2, h3', {color:font, duration:1}), 
 
-            onEnterBack: () => gsap.to('main, h2, h3', {color:font}), 
+            onEnterBack: () => gsap.to('main, h2, h3', {color:font, duration:1}), 
   
-            onLeaveBack: () => gsap.to('main, h2, h3', {color:font}),
+            onLeaveBack: () => gsap.to('main, h2, h3', {color:font, duration:1}),
  
             markers:true
         });
