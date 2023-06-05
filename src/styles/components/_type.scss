@@ -7,6 +7,7 @@ body {
   line-height: 1.75;
   font-family: $font-paragraph;
   background-color: $color-background;
+  color: $color-text;
 }
 
 .container {
@@ -14,9 +15,9 @@ body {
 }
 
 h1, h2, h3 {
-  color: $color-title;
   font-family: $font-title;
   line-height: 1.4;
+  color: $color-title;
 }
 
 h1 {
@@ -36,7 +37,6 @@ h3 {
 
 p {
   font-size: $font-size-base;
-  color: $color-text;
   margin: $margin--text;
 }
 
@@ -66,8 +66,18 @@ button {
 }
 
 .quote {
-font-size: $font-size-xxl;
-text-align: center;
+  font-size: $font-size-xxl;
+  text-align: center;
+  margin: $margin--quote;
+  font-style: italic;
+
+  &::before {
+    content: "«" ;
+  }
+
+  &::after {
+    content: "»" ;
+  }
 }
 
 .quotecontainer {
@@ -79,12 +89,6 @@ text-align: center;
     color: $color-text-fourth;
     margin: 0.5rem 0rem;
   }
-}
-
-q {
-  font-size: $font-size-xl;
-  text-align: center;
-  margin: $margin--text;
 }
 
 .line {
@@ -260,7 +264,8 @@ body::-webkit-scrollbar-thumb {
 .problemdoc {
   &__container {
     background-color: $color-block;
-    padding: $padding--block;
+    padding: $padding--bigblock;
+    margin: $margin--block;
 
     & p {
       color: $color-text-secondary;
@@ -275,6 +280,23 @@ body::-webkit-scrollbar-thumb {
     & p {
       color: $color-text-fourth;
       margin: 0.5rem 0rem;
+    }
+  }
+
+  &__quote {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-xxl;
+    text-align: center;
+    margin: $margin--quote;
+    font-style: italic;
+
+    & :nth-child(1)::before {
+      content: "«" ;
+    }
+
+    & :nth-child(2)::after {
+      content: "»" ;
     }
   }
 }
@@ -299,10 +321,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-// .studydoc {
-//   background-color: $color-background-secondary;
-
-//   & p, h2, h3 {
-//     color: $color-text-secondary;
-//   }
-// }
+.studydoc {
+  &__subtitle {
+    margin-bottom: 0em;
+  }
+}
