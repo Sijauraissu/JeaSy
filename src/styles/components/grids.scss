@@ -383,7 +383,26 @@
 
     &__quoteblock {
         grid-area: 16 / 1 / 17 / 8;
+
+        display: grid; 
+        grid-template-columns: 0.3fr 5fr 0.3fr; 
+        gap: 0px 0px; 
     }
+
+    &__quote {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    &__text {
+        &--surprised {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        &--idea {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+    }
+
 }
 
 .problemdoc {
@@ -544,7 +563,117 @@
     }
 }
 
+.studydoc {
+    display: grid; 
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr; 
+    gap: 0px 8px; 
 
+    &__subtitle {
+        grid-area: 1 / 2 / 2 / 5;
+    }
+
+    &__subsubtitle {
+        &--langage {
+            grid-area: 2 / 2 / 3 / 6;
+        }
+
+        &--codepen {
+            grid-area: 6 / 2 / 7 / 6;
+        }
+
+        &--discord {
+            grid-area: 12 / 2 / 13 / 6;
+        }
+
+        &--ia {
+            grid-area: 18 / 2 / 19 / 6;
+        }
+
+        &--mdn {
+            grid-area: 22 / 2 / 23 / 6;
+        }
+    }
+
+    &__text {
+        &--langage {
+            grid-area: 3 / 2 / 4 / 7;
+        }
+
+        &--same {
+            grid-area: 4 / 2 / 5 / 5;
+        }
+
+        &--codepen {
+            grid-area: 7 / 2 / 8 / 7;
+        }
+
+        &--badcode {
+            grid-area: 8 / 2 / 9 / 7;
+        }
+
+        &--rival {
+            grid-area: 9 / 2 / 10 / 6;
+        }
+
+        &--futur {
+            grid-area: 11 / 2 / 12 / 7;
+        }
+        
+        &--discord {
+            grid-area: 13 / 2 / 14 / 7;
+        }
+
+        &--voc {
+            grid-area: 15 / 2 / 16 / 7;
+        }
+
+        &--message {
+            grid-area: 17 / 2 / 18 / 7;
+        }
+
+        &--chatgpt {
+            grid-area: 19 / 2 / 20 / 7;
+        }
+
+        &--tools {
+            grid-area: 21 / 2 / 22 / 7; 
+        }
+
+        &--mdn {
+            grid-area: 24 / 2 / 25 / 7;
+        }
+    }
+
+    &__img {
+        &--langage {
+            grid-area: 5 / 3 / 6 / 6;
+        }
+
+        &--codepen {
+            grid-area: 10 / 1 / 11 / 8;
+        }
+
+        &--discussion {
+            grid-area: 14 / 1 / 15 / 8;
+        }
+
+        &--chat {
+            grid-area: 16 / 3 / 17 / 6;
+        }
+
+        &--ia {
+            grid-area: 20 / 1 / 21 / 8;
+        }
+
+        &--mdn {
+            grid-area: 23 / 1 / 24 / 8;
+        }
+    }
+
+    &__btn {
+        grid-area: 25 / 3 / 26 / 6;
+    }
+}
 
 .presentationdoc {
     display: grid; 

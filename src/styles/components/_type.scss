@@ -65,9 +65,26 @@ button {
   background-color: transparent;
 }
 
-.quote{
+.quote {
 font-size: $font-size-xxl;
 text-align: center;
+}
+
+.quotecontainer {
+  background-color: $color-block-third;
+  padding: $padding--block;
+  margin: $margin--block;
+
+  & p {
+    color: $color-text-fourth;
+    margin: 0.5rem 0rem;
+  }
+}
+
+q {
+  font-size: $font-size-xl;
+  text-align: center;
+  margin: $margin--text;
 }
 
 .line {
@@ -232,11 +249,52 @@ body::-webkit-scrollbar-thumb {
   &__quoteblock {
     display: flex;
     flex-direction: column;
-    background-color: red;
   }
 
   &__quote {
     text-align: center;
     
+  }
+}
+
+.problemdoc {
+  &__container {
+    background-color: $color-block;
+    padding: $padding--block;
+
+    & p {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__quotecontainer {
+    background-color: $color-block-third;
+    padding: $padding--block;
+    margin: $margin--block;
+
+    & p {
+      color: $color-text-fourth;
+      margin: 0.5rem 0rem;
+    }
+  }
+}
+
+.fonctionalitydoc {
+  &__rankinglist {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  &__rank {
+    position: absolute;
+    width: 20%;
+    opacity: 0;
+
+    & :nth-child(1) {
+      opacity: 1;
+    }
   }
 }

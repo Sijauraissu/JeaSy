@@ -1,5 +1,8 @@
 "use strict";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 //TRANSITION DE PAGE
 //Création d'une constante pour stocker la div de la transition
 const transition = document.querySelector(".transition")
@@ -73,8 +76,9 @@ setInterval(() => {
 
 
 //NAVIGATION INTERACTIVE
-//Set up de la variable de scroll à 0
+//Set up de la position du scroll à 0
 let oldScrollY = 0;
+//Set up du décalage vertical pour activer la nav
 let offsetY = 250;
 //Création d'un let pour stocker la navigation
 let navigation = document.querySelector(".navigation");
@@ -105,4 +109,43 @@ if (navigation){
             }
         });
     }
+}
+
+
+//Transition pour les images dans le header en version téléphone
+var IMGTransition = document.querySelectorAll(".fonctionalitydoc__rank");
+var screensize = screen.width;
+
+if (IMGTransition) {
+    var tlIMG = new gsap.timeline({repeat: -1});
+    tlIMG
+    .to(IMGTransition[0], { opacity: 1, duration: 1.5,x : -100 }, ">")
+    .to(IMGTransition[0], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[0], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+
+    .to(IMGTransition[1], { opacity: 0, duration: 1, x : -100}, ">")
+    .to(IMGTransition[1], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[1], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+
+    .to(IMGTransition[2], { opacity: 0, duration: 1, x : -100 }, ">")
+    .to(IMGTransition[2], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[2], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+    
+    .to(IMGTransition[3], { opacity: 0, duration: 1, x : -100 }, ">")
+    .to(IMGTransition[3], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[3], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+    
+    .to(IMGTransition[4], { opacity: 0, duration: 1, x : -100 }, ">")
+    .to(IMGTransition[4], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[4], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+
+    .to(IMGTransition[5], { opacity: 0, duration: 1, x : -100 }, ">")
+    .to(IMGTransition[5], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[5], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+
+    .to(IMGTransition[6], { opacity: 0, duration: 1, x : -100 }, ">")
+    .to(IMGTransition[6], { opacity: 1, duration: 2, x : 0 }, ">")
+    .to(IMGTransition[6], { opacity: 0, duration: 1, x : 100 }, "+=1.5")
+
+  tlIMG.play();
 }
