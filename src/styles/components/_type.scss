@@ -376,4 +376,31 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+@media (min-width: 1024px) {
+  .navigation {
+    &__container {
+        width: 18%;
+        left: 0;
+    }
 
+    &__burger{
+        display: none;
+    }
+}
+
+.problemdoc {
+    &__quote span{
+        margin-left: 20%;
+    }
+
+    &__img {
+        margin-left: 40%;
+    }
+}
+
+.hypothesesdoc {
+  &__quotecontainer {
+    display: grid;
+  }
+}
+}

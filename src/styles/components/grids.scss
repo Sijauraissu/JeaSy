@@ -1154,3 +1154,26 @@
     }
 }   
 
+@media (min-width: 1024px) {
+    .userdoc, .hypothesesdoc, .fonctionalitydoc, .problemdoc, .studydoc, .presentationdoc {
+        grid-template-columns: 20% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
+
+        &__quoteblock {
+            grid-area: 12 / 1 / 13 / 13;
+            grid-template-columns: 20% 5fr 0.3fr;
+            gap: 0px 16px;
+        }
+    }
+
+    .hypothesesdoc {
+        &__quotecontainer {
+          display: grid;
+          grid-template-columns: 20% 10fr 0.5fr;
+          gap: 0px 16px;
+        }
+
+        &__quote {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+    }
+}
