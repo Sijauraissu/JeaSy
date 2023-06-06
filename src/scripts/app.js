@@ -183,7 +183,7 @@ window.addEventListener ("load", () => {
           
           onEnterBack: () => gsap.to('main', {backgroundColor:color, duration:1}), 
 
-          markers:true
+          markers:false
         });
 
         ScrollTrigger.create({
@@ -198,7 +198,7 @@ window.addEventListener ("load", () => {
   
             onLeaveBack: () => gsap.to('main, h2, h3', {color:font, duration:1}),
  
-            markers:true
+            markers:false
         });
       
     });

@@ -55,6 +55,10 @@ color: $color-text;
 margin: $margin--small;
 }
 
+img {
+  width: 100%;
+}
+
 button {
   font-size: $font-size-base;
   margin: $margin--button;
@@ -152,8 +156,6 @@ body::-webkit-scrollbar-thumb {
   &__container {
     color: $color-text-secondary;
     background-color: $color-block-secondary;
-    position: fixed;
-    width: 100%;
 
     width: 100%;
     height: 100%;
@@ -166,20 +168,6 @@ body::-webkit-scrollbar-thumb {
     transition: 0.5s;
     margin: 0 auto;
     background-color: $color-block;
-  }
-
-  &__list {
-    // width: 100%;
-    // height: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // position: fixed;
-    // left: 100%;
-    // transition: 0.5s;
-    // margin: 0 auto;
-    // background-color: $color-block;
   }
 
   &__link {
@@ -338,3 +326,36 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 0em;
   }
 }
+
+//VERSION TABLETTE
+@media (min-width: 768px) {
+  .navigation{
+
+    &__container {
+      width: 40%;
+      left: -40%;
+
+    }
+
+    &__burger {
+      left: 10%;
+      top: 5%;
+    }
+  }
+
+  .activeNav {
+    left: 0;
+    z-index: 100;
+    opacity: 1;
+  }
+
+.problemdoc {
+  &__img {
+    margin-bottom: -120px;
+    z-index: 100;
+  }
+}
+
+}
+
+
