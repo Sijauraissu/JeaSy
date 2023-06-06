@@ -472,17 +472,21 @@
             grid-area: 2 / 2 / 3 / 7;
         }
 
+        &--goal {
+            grid-area: 3 / 2 / 4 / 7;
+        }
+
         &--friendly {
-            grid-area: 5 / 2 / 6 / 7;
+            grid-area: 6 / 2 / 7 / 7;
         }
     }
 
     &__img {
-        grid-area: 3 / 3 / 4 / 6;
+        grid-area: 4 / 3 / 5 / 6;
     }
 
     &__quotecontainer {
-        grid-area: 4 / 1 / 5 / 8; 
+        grid-area: 5 / 1 / 6 / 8; 
     }
 }
 
@@ -874,4 +878,279 @@
             grid-area: 2 / 2 / 4 / 6; 
         }
     }
+
+    .hypothesesdoc {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+
+        &__subtitle {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__text {
+            &--pivot {
+                grid-area: 2 / 2 / 3 / 8;
+            }
+
+            &--goal {
+                grid-area: 3 / 2 / 4 / 8;
+            }
+    
+            &--friendly {
+                grid-area: 6 / 2 / 7 / 8;
+            }
+        }
+    
+        &__img {
+            justify-self: center; 
+            align-self: end; 
+            grid-area: 3 / 8 / 5 / 12; 
+        }
+    
+        &__quotecontainer {
+            grid-area: 5 / 1 / 6 / 13;
+        }
+    }
+
+    .fonctionalitydoc {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__subtitle {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subsubtitle {
+            &--chat {
+                grid-area: 2 / 2 / 3 / 8;            
+            }
+    
+            &--game {
+                grid-area: 5 / 2 / 6 / 8;
+            }
+    
+            &--help {
+                grid-area: 9 / 2 / 10 / 8;
+            }
+    
+            &--futur {
+                grid-area: 12 / 2 / 13 / 8;
+            }
+        }
+    
+        &__img {
+            &--chat {
+                justify-self: center; 
+                align-self: center; 
+                grid-area: 3 / 2 / 5 / 6; 
+            }
+    
+            &--blario {
+                justify-self: center; 
+                align-self: center; 
+                grid-area: 6 / 8 / 8 / 12; 
+            }
+        }
+    
+        &__text {
+            &--chat {
+                grid-area: 3 / 6 / 4 / 12;
+            }
+    
+            &--rank {
+                grid-area: 4 / 6 / 5 / 12;
+            }
+    
+            &--hierarchy {
+                grid-area: 7 / 2 / 8 / 8;
+            }
+    
+            &--help {
+                grid-area: 10 / 2 / 11 / 10;
+            }
+    
+            &--filter {
+                grid-area: 11 / 7 / 12 / 12;
+            }
+    
+            &--futur {
+                grid-area: 13 / 2 / 14 / 10;
+            }
+        }
+    
+        &__list {
+            grid-area: 11 / 2 / 12 / 6;
+        }
+    
+        &__rankinglist {
+            grid-area: 8 / 1 / 9 / 13;
+        }
+    
+        &__line {
+            justify-self: center; 
+            grid-area: 11 / 2 / 12 / 12; 
+        }
+    }
+
+    .studydoc {
+        display: grid; 
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;         gap: 0px 16px; 
+    
+        &__subtitle {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subsubtitle {
+            &--langage {
+                grid-area: 2 / 2 / 3 / 8;
+            }
+    
+            &--codepen {
+                grid-area: 5 / 2 / 6 / 8;
+            }
+    
+            &--discord {
+                grid-area: 10 / 2 / 11 / 8;
+            }
+    
+            &--ia {
+                grid-area: 15 / 2 / 16 / 8;
+            }
+    
+            &--mdn {
+                grid-area: 18 / 2 / 19 / 8;
+            }
+        }
+    
+        &__text {
+            &--langage {
+                grid-area: 3 / 2 / 4 / 8;
+            }
+    
+            &--same {
+                grid-area: 4 / 2 / 5 / 8;
+            }
+    
+            &--codepen {
+                grid-area: 6 / 6 / 7 / 12;
+            }
+    
+            &--badcode {
+                grid-area: 7 / 6 / 8 / 12; 
+            }
+    
+            &--rival {
+                grid-area: 8 / 6 / 9 / 12;
+            }
+    
+            &--futur {
+                grid-area: 9 / 2 / 10 / 8;
+            }
+            
+            &--discord {
+                grid-area: 11 / 2 / 12 / 8;
+            }
+    
+            &--voc {
+                grid-area: 12 / 2 / 13 / 8;
+            }
+    
+            &--message {
+                grid-area: 14 / 6 / 15 / 12;
+            }
+    
+            &--chatgpt {
+                grid-area: 16 / 6 / 17 / 12;
+            }
+    
+            &--tools {
+                grid-area: 17 / 6 / 18 / 12; 
+            }
+    
+            &--mdn {
+                grid-area: 19 / 2 / 20 / 8;
+            }
+        }
+    
+        &__img {
+            &--langage {
+                justify-self: end; 
+                align-self: center; 
+                grid-area: 3 / 8 / 5 / 12; 
+            }
+    
+            &--codepen {
+                justify-self: start; 
+                align-self: center; 
+                grid-area: 6 / 2 / 9 / 6;
+            }
+    
+            &--discussion {
+                justify-self: center; 
+                align-self: center; 
+                grid-area: 11 / 8 / 14 / 12; 
+            }
+    
+            &--chat {
+                grid-area: 13 / 2 / 15 / 6;
+            }
+    
+            &--ia {
+                grid-area: 16 / 2 / 18 / 6;
+            }
+    
+            &--mdn {
+                justify-self: end; 
+                align-self: center; 
+                grid-area: 19 / 8 / 21 / 12; 
+            }
+        }
+    
+        &__btn {
+            grid-area: 20 / 3 / 21 / 7;
+        }
+    }
+
+
+
+    .presentationdoc {
+        display: grid; 
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__subtitle {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__timer {
+            grid-area: 2 / 5 / 3 / 12;
+        }
+    
+        &__img {
+            justify-self: center; 
+            align-self: center; 
+            grid-area: 4 / 2 / 6 / 7; 
+        }
+    
+        &__text {
+            &--oral {
+                grid-area: 3 / 2 / 4 / 7;
+            }
+    
+            &--javascript {
+                grid-area: 3 / 7 / 4 / 12;
+            }
+    
+            &--mid {
+                grid-area: 4 / 7 / 5 / 12;
+            }
+    
+            &--ending {
+                grid-area: 5 / 7 / 6 / 12;
+            }
+        }
+    }
 }   
+
