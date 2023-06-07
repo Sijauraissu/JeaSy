@@ -47,6 +47,10 @@ li {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    border-bottom: #FCF3EE solid 2px;
+  }
 }
 
 small {
@@ -59,7 +63,7 @@ img {
   width: 100%;
 }
 
-button {
+.button {
   font-size: $font-size-base;
   margin: $margin--button;
   height: 3em;
@@ -106,7 +110,7 @@ section {
 }
 
 .activesection{
-  color: red;
+  font-size: 1.3rem;
 }
 
 //SCROLLBAR
@@ -128,7 +132,7 @@ body::-webkit-scrollbar-thumb {
 //TRANSITION
 .cover{
   position: fixed;
-  background-color: $color-accent;
+  background-color: $color-block;
   top: 0;
   height: 100vh;
   width: 100%;
@@ -137,7 +141,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .transition.slide .cover {
-  background: $color-accent;  
+  background: $color-block;  
   animation: slide 1s ease-in-out forwards;
 }
 
@@ -155,8 +159,6 @@ body::-webkit-scrollbar-thumb {
 
   &__container {
     color: $color-text-secondary;
-    background-color: $color-block-secondary;
-
     width: 100%;
     height: 100%;
     display: flex;
@@ -167,11 +169,15 @@ body::-webkit-scrollbar-thumb {
     left: 100%;
     transition: 0.5s;
     margin: 0 auto;
-    background-color: $color-block;
+    background-color: $color-nav;
   }
 
   &__link {
     color: $color-text-secondary;
+  }
+
+  &__el {
+    margin: 0.5rem 16px;
   }
 
   &__burger {
@@ -352,6 +358,7 @@ body::-webkit-scrollbar-thumb {
     &__container {
       width: 40%;
       left: -40%;
+      align-items: flex-start;
 
     }
 
