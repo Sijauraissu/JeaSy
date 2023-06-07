@@ -60,18 +60,19 @@ margin: $margin--small;
 }
 
 img {
-  width: 100%;
+  width: 80%;
+  margin: 0em 10% 2rem;
 }
 
-.button {
-  font-size: $font-size-base;
-  margin: $margin--button;
-  height: 3em;
-  border: 2px solid $color-button-primary;
-  border-radius: 8px;
-  color: $color-text-third;
-  background-color: transparent;
-}
+// .button {
+//   font-size: $font-size-base;
+//   margin: $margin--button;
+//   height: 3em;
+//   border: 2px solid $color-button-primary;
+//   border-radius: 8px;
+//   color: $color-text-third;
+//   background-color: transparent;
+// }
 
 .quote {
   font-size: $font-size-xxl;
@@ -222,7 +223,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link {
-  color: green;
+  color: $color-title;
   text-decoration: none;
   position: relative;
 }
@@ -237,11 +238,18 @@ body::-webkit-scrollbar-thumb {
   width: 2em;
   height: 2em;
   border-radius: 2em;
-  background-color: red;
+  background-color: $color-button-secondary;
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
   left: -0.65em;
+}
+
+.btn {
+  margin: 0.5rem 3rem;
+  & a {
+    cursor: pointer;
+  }
 }
 
 //HERO
@@ -382,6 +390,7 @@ body::-webkit-scrollbar-thumb {
       width: 40%;
       left: -40%;
       align-items: flex-start;
+      border-right: 2px solid $color-button-primary;
 
     }
 

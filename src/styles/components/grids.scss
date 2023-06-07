@@ -133,7 +133,6 @@
     display: grid; 
     grid-template-columns: 16px repeat(5, 1fr) 32px; 
     gap: 0px 16px;
-    // height: 100vh;
 
     &__small {
         grid-area: 1 / 2 / 2 / 6;
@@ -720,8 +719,268 @@
 
 //VERSION TABLETTE
 @media (min-width: 768px) {
+    .hero{
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
 
+        &__title {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__report {
+            grid-area: 2 / 2 / 3 / 8; 
+        }
+    
+        &__choice {
+            grid-area: 3 / 2 / 4 / 8;
+        }
+    
+        &__btn {
+            &--documentation {
+                justify-self: center; 
+                grid-area: 4 / 4 / 5 / 10; 
+            }
+    
+            &--discover {
+                justify-self: center; 
+                grid-area: 5 / 4 / 6 / 10; 
+            }
+        }
+    }
 
+    .user {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11; 
+        }
+    
+        &__img {
+            justify-self: center;
+            align-self: end;
+            grid-area: 3 / 8 / 5 / 12;
+        }
+    
+        &__text {
+            &--meet {
+                grid-area: 3 / 2 / 4 / 8;
+            }
+    
+            &--drink {
+                grid-area: 4 / 2 / 5 / 8;
+            }
+        }
+    
+        &__btn {
+            grid-area: 5 / 2 / 6 / 7;
+        }
+    }
+
+    .problem {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11; 
+        }
+    
+        &__img {
+            justify-self: center; 
+            align-self: end; 
+            grid-area: 3 / 2 / 5 / 6; 
+        }
+    
+        &__text {
+            &--js {
+                grid-area: 3 / 6 / 4 / 12;
+            }
+    
+            &--learn {
+                grid-area: 4 / 6 / 5 / 12;
+            }
+        }
+    
+        &__btn {
+            grid-area: 5 / 7 / 6 / 12; 
+            justify-self: end; 
+            align-self: center; 
+        }
+    }
+
+    .hypotheses {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11; 
+        }
+    
+        &__img {
+            justify-self: center;
+            align-self: end;
+            grid-area: 3 / 8 / 5 / 12;
+        }
+    
+        &__text {
+            &--game {
+                grid-area: 3 / 2 / 4 / 8;
+            }
+    
+            &--questionning {
+                grid-area: 4 / 2 / 5 / 8;
+            }
+        }
+    
+        &__btn {
+            grid-area: 5 / 2 / 6 / 7;
+        }
+    }
+
+    .fonctionnality {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11;
+        }
+    
+        &__img {
+            justify-self: center; 
+            align-self: end; 
+            grid-area: 3 / 2 / 5 / 6; 
+        }
+    
+        &__text {
+    
+            &--website {
+                grid-area: 3 / 6 / 4 / 12;
+            }
+    
+            &--learning {
+                grid-area: 4 / 6 / 5 / 12;
+            }
+    
+            &--fonctionnality {
+                grid-area: 5 / 6 / 6 / 12;
+            }
+        }
+    
+        &__btn {
+            grid-area: 6 / 7 / 7 / 12; 
+            justify-self: end; 
+            align-self: center; 
+        }
+    }
+    
+
+    .study {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11; 
+        }
+    
+        &__img {
+            justify-self: center;
+            align-self: end;
+            grid-area: 3 / 8 / 4 / 12;
+        }
+    
+        &__text {
+            grid-area: 3 / 2 / 4 / 8;
+        }
+    
+        &__btn {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+    }
+
+    .presentation {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+    
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11;
+        }
+    
+        &__timer {
+            grid-area: 3 / 5 / 4 / 12;
+        }
+    
+        &__img {
+            justify-self: center; 
+            align-self: end; 
+            grid-area: 3 / 2 / 5 / 6; 
+        }
+    
+        &__text {
+            grid-area: 4 / 6 / 5 / 12;
+        }
+    
+        &__btn {
+            grid-area: 5 / 7 / 6 / 12;
+            justify-self: end; 
+            align-self: center; 
+        }
+    }
+
+    .conclusion {
+        display: grid; 
+        grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr; 
+        gap: 0px 16px; 
+
+    
+        &__small {
+            grid-area: 1 / 2 / 2 / 8;
+        }
+    
+        &__subtitle {
+            grid-area: 2 / 2 / 3 / 11;
+        }
+    
+        &__text {
+            grid-area: 3 / 2 / 4 / 7; 
+        }
+    
+        &__img {
+            grid-area: 4 / 2 / 5 / 7;
+        }
+    }
+
+    //PAGE DE DOC
     .userdoc {
         display: grid; 
         grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
@@ -1157,6 +1416,11 @@
 }   
 
 @media (min-width: 1024px) {
+
+    .hero, .user, .hypotheses, .fonctionnality, .problem, .study, .presentation, .conclusion {
+        grid-template-columns: 20% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
+    }
+
     .userdoc, .hypothesesdoc, .fonctionalitydoc, .problemdoc, .studydoc, .presentationdoc {
         grid-template-columns: 20% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr; 
 
