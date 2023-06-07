@@ -182,3 +182,169 @@ window.addEventListener ("load", () => {
     });
 });
 
+
+var linkanimation = document.querySelectorAll(".link");
+
+linkanimation.forEach ((links)=>{
+    let bubble = links.querySelector(".bubble");
+
+    let test = gsap.timeline()
+    test.pause();
+    
+    test.to(bubble,{ width: "calc(100% + 1.3em)", ease: "Elastic.easeOut(0.25)", duration: 0.4 },">")
+    test.to(bubble,{ width: "2em", left: "calc(100% - 1.45em)", ease: "Elastic.easeOut(0.4)", duration: 0.6 },">")
+
+    links.addEventListener("mouseenter", (e) => {
+        test.play();
+    })
+
+    links.addEventListener("mouseleave", (e) => {
+        test.reverse();
+    })
+})
+
+
+
+
+
+// ANIMATION DES LIENS
+// Variable pour stocker tous les liens
+// var links = document.querySelectorAll(".link");
+// // Variable pour stocker toutes les bulles des liens
+// let bubble = document.querySelectorAll(".bubble");
+// console.log(links);
+// console.log(bubble);
+
+// let hoverlinkTL = gsap.timeline();
+// hoverlinkTL.pause();
+
+// for (const link of links) {
+//     link.addEventListener("mouseenter", (e) => {
+//         let bubble = e.currentTarget.querySelector(".bubble");
+
+//         hoverlinkTL.to(bubble, {
+            // width: "calc(100% + 1.3em)",
+            // ease: "Elastic.easeOut(0.25)",
+            // duration: 0.4
+//         }).play();
+    
+//         hoverlinkTL.to(bubble, {
+//             width: "2em",
+//             left: "calc(100% - 1.45em)",
+//             ease: "Elastic.easeOut(0.4)",
+//             duration: 0.6
+//         }).play();
+//     });
+    
+//     link.addEventListener("mouseleave", (e) => {
+//         // hoverlinkTL.reverse();
+//         let bubble = e.currentTarget.querySelector(".bubble");
+    
+//         hoverlinkTL.to(bubble, {
+//             width: "2em",
+//             left: "calc(100% - 1.45em)",
+//             ease: "Elastic.easeOut(0.4)",
+//             duration: 0.6
+//         }).reverse();
+    
+//         hoverlinkTL.to(bubble, {
+//             width: "calc(100% + 1.3em)",
+//             ease: "Elastic.easeOut(0.25)",
+//             duration: 0.4
+//         }).reverse();
+    
+    
+//     }); 
+// }
+
+// links.forEach((link) => {
+//         link.addEventListener("mouseenter", () => {
+//             hoverlinkTL.play();
+//         });
+      
+//         link.addEventListener("mouseleave", () => {
+//             hoverlinkTL.reverse();
+//         });  
+// })
+
+// // // ANIMATION DES LIENS
+// // // Variable pour stocker tous les liens
+// var links = document.querySelectorAll(".link")
+// // Variable pour stocker toutes les bulles des liens
+// var bubble = document.querySelectorAll(".bubble");
+
+// let hoverlinkTL = gsap.timeline();
+// hoverlinkTL.pause();
+
+// // Boucle pour savoir sur quels liens la souris passe en hover
+// hoverlinkTL.to(bubble, {
+//     width: "calc(100% + 1.3em)",
+//     ease: "Elastic.easeOut(0.25)",
+//     duration: 0.4
+// });
+// hoverlinkTL.to(bubble, {
+//     width: "2em",
+//     left: "calc(100% - 1.45em)",
+//     ease: "Elastic.easeOut(0.4)",
+//     duration: 0.6
+// });
+  
+// links.addEventListener("mouseenter", () => {
+//     hoverlinkTL.play();
+// });
+  
+// links.addEventListener("mouseleave", () => {
+//     hoverlinkTL.reverse();
+// });    
+
+
+
+// // ANIMATION DES LIENS
+// // Variable pour stocker tous les liens
+// var links = document.querySelectorAll(".link");
+// // Variable pour stocker toutes les bulles des liens
+// let bubble = document.querySelectorAll(".bubble");
+// console.log(links);
+// console.log(bubble);
+
+// let hoverlinkTL = gsap.timeline();
+// hoverlinkTL.pause();
+
+// links.forEach(link => {
+//     link.addEventListener("mouseenter", (e) => {
+//         let bubble = e.currentTarget.querySelector(".bubble");
+
+//         hoverlinkTL.to(bubble, {
+//             width: "calc(100% + 1.3em)",
+//             ease: "Elastic.easeOut(0.25)",
+//             duration: 0.4
+//         }).play();
+    
+//         hoverlinkTL.to(bubble, {
+//             width: "2em",
+//             left: "calc(100% - 1.45em)",
+//             ease: "Elastic.easeOut(0.4)",
+//             duration: 0.6
+//         }).play();
+//     });
+    
+//     link.addEventListener("mouseleave", (e) => {
+//         // hoverlinkTL.reverse();
+//         let bubble = e.currentTarget.querySelector(".bubble");
+    
+//         hoverlinkTL.to(bubble, {
+//             width: "2em",
+//             left: "calc(100% - 1.45em)",
+//             ease: "Elastic.easeOut(0.4)",
+//             duration: 0.6
+//         }).reverse();
+    
+//         hoverlinkTL.to(bubble, {
+//             width: "calc(100% + 1.3em)",
+//             ease: "Elastic.easeOut(0.25)",
+//             duration: 0.4
+//         }).reverse();
+    
+    
+//     }); 
+// }) 

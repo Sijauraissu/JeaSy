@@ -110,7 +110,7 @@ section {
 }
 
 .activesection{
-  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 //SCROLLBAR
@@ -221,6 +221,29 @@ body::-webkit-scrollbar-thumb {
   background: $color-block-secondary;
 }
 
+.link {
+  color: green;
+  text-decoration: none;
+  position: relative;
+}
+.link span{
+  position: relative;
+}
+
+.arrow{
+  margin-left: 0.5em;
+}
+.link .bubble {
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  left: -0.65em;
+}
+
 //HERO
 .hero {
   &__btn {
@@ -230,11 +253,11 @@ body::-webkit-scrollbar-thumb {
       align-items: center;
     }
 
-    &--discover::after {
-      content: url(/assets/images/arrow-down.svg);
-      transform: scale(0.5);
-      animation: arrowButton 3s infinite;
-    }
+    // &--discover::after {
+    //   content: url(/assets/images/arrow-down.svg);
+    //   transform: scale(0.5);
+    //   animation: arrowButton 3s infinite;
+    // }
   }
 }
 

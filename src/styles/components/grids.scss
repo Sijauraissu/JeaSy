@@ -19,11 +19,13 @@
 
     &__btn {
         &--documentation {
-            grid-area: 4 / 3 / 5 / 6;
+            grid-area: 4 / 2 / 5 / 7;
+            justify-self: center;
         }
 
         &--discover {
-            grid-area: 5 / 3 / 6 / 6;
+            grid-area: 5 / 2 / 6 / 7;
+            justify-self: center;
         }
     }
 }
