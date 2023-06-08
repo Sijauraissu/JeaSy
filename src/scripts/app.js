@@ -206,38 +206,91 @@ linkanimation.forEach ((links)=>{
 
 
 
-var btnUp = document.querySelector(".scrollbtn__up");
-var btnDown = document.querySelector(".scrollbtn__down");
+
+
+// var btnUp = document.querySelector(".scrollbtn__up");
+// var btnDown = document.querySelector(".scrollbtn__down");
 
 
 
-function scroll(i) {
-    scrollsections[i].scrollIntoView();
-}
+// function scroll(i) {
+//     scrollsections[i].scrollIntoView();
+// }
 
-btnUp.addEventListener("click", function() {
-    scrollpos++;
-    console.log(scrollpos);
-    if(scrollpos >= scrollsections.length ) {
-        scrollpos = 0;
-    }
-    // scrollsections[scrollpos].classList.add("active");
-
-    // showvalue.innerHTML = tab_input[scrollpos];
-    scroll(scrollpos);
-});
-
-
-// btnDown.addEventListener("click", function() {
-//     scrollpos--;
+// btnUp.addEventListener("click", function() {
+//     scrollpos++;
 //     console.log(scrollpos);
-//     if(scrollpos < 0 ) {
-//         scrollpos = scrollsections.length - 1;
+//     if(scrollpos >= scrollsections.length ) {
+//         scrollpos = 0;
 //     }
-
 //     // scrollsections[scrollpos].classList.add("active");
 
 //     // showvalue.innerHTML = tab_input[scrollpos];
+//     scroll(scrollpos);
 // });
 
-// document.querySelector('#section_user').scrollIntoView();
+
+// // btnDown.addEventListener("click", function() {
+// //     scrollpos--;
+// //     console.log(scrollpos);
+// //     if(scrollpos < 0 ) {
+// //         scrollpos = scrollsections.length - 1;
+// //     }
+
+// //     // scrollsections[scrollpos].classList.add("active");
+
+// //     // showvalue.innerHTML = tab_input[scrollpos];
+// // });
+
+// // document.querySelector('#section_user').scrollIntoView();
+
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.set(".banner3d-1", { perspectiveOrigin: "center -100vh"});
+gsap.set(".banner3d-2", { perspectiveOrigin: "center -100vh"});
+gsap.set(".banner3d-3", { perspectiveOrigin: "center -100vh"});
+gsap.set(".banner3d-4", { perspectiveOrigin: "left -100vh"});
+
+gsap.to(".banner3d-1", {
+  scrollTrigger: {
+    trigger: ".banner3d-1",
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top"
+  },
+  perspectiveOrigin: "center 100vh", 
+  ease: "none"
+});
+
+gsap.to(".banner3d-2", {
+  scrollTrigger: {
+    trigger: ".banner3d-2",
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top"
+  },
+  perspectiveOrigin: "center 100vh", 
+  ease: "none"
+});
+
+gsap.to(".banner3d-3", {
+  scrollTrigger: {
+    trigger: ".banner3d-3",
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top"
+  },
+  perspectiveOrigin: "center 100vh", 
+  ease: "none"
+});
+
+gsap.to(".banner3d-4", {
+  scrollTrigger: {
+    trigger: ".banner3d-4",
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top"
+  },
+  perspectiveOrigin: "left 100vh", 
+  ease: "none"
+});
