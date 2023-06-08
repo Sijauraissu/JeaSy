@@ -74,7 +74,7 @@ setInterval(() => {
     }
 }, 1000);
 
-
+var scrollpos = 0;
 //NAVIGATION INTERACTIVE
 //Set up de la position du scroll à 0
 let oldScrollY = 0;
@@ -83,12 +83,13 @@ let offsetY = 250;
 //Création d'un let pour stocker la navigation
 let navigation = document.querySelector(".navigation");
 //Utilisation d'un if pour savoir s'il y a ou non la navigation
+const scrollsections = document.querySelectorAll("section[id]");
 if (navigation){
     //Vérification du scroll sur le site
     window.addEventListener('scroll', function(e) {
-  });
-  //Selection de toutes les id des sections
-  const sections = document.querySelectorAll("section[id]");
+    });
+    //Selection de toutes les id des sections
+    const sections = document.querySelectorAll("section[id]");
     //Activation au scroll
     window.addEventListener("scroll", navHighlighter);
 
@@ -190,7 +191,7 @@ linkanimation.forEach ((links)=>{
 
     let test = gsap.timeline()
     test.pause();
-    
+
     test.to(bubble,{ width: "calc(100% + 1.3em)", ease: "Elastic.easeOut(0.25)", duration: 0.4 },">")
     test.to(bubble,{ width: "2em", left: "calc(100% - 1.45em)", ease: "Elastic.easeOut(0.4)", duration: 0.6 },">")
 
@@ -205,146 +206,38 @@ linkanimation.forEach ((links)=>{
 
 
 
+var btnUp = document.querySelector(".scrollbtn__up");
+var btnDown = document.querySelector(".scrollbtn__down");
 
 
-// ANIMATION DES LIENS
-// Variable pour stocker tous les liens
-// var links = document.querySelectorAll(".link");
-// // Variable pour stocker toutes les bulles des liens
-// let bubble = document.querySelectorAll(".bubble");
-// console.log(links);
-// console.log(bubble);
 
-// let hoverlinkTL = gsap.timeline();
-// hoverlinkTL.pause();
+function scroll(i) {
+    scrollsections[i].scrollIntoView();
+}
 
-// for (const link of links) {
-//     link.addEventListener("mouseenter", (e) => {
-//         let bubble = e.currentTarget.querySelector(".bubble");
+btnUp.addEventListener("click", function() {
+    scrollpos++;
+    console.log(scrollpos);
+    if(scrollpos >= scrollsections.length ) {
+        scrollpos = 0;
+    }
+    // scrollsections[scrollpos].classList.add("active");
 
-//         hoverlinkTL.to(bubble, {
-            // width: "calc(100% + 1.3em)",
-            // ease: "Elastic.easeOut(0.25)",
-            // duration: 0.4
-//         }).play();
-    
-//         hoverlinkTL.to(bubble, {
-//             width: "2em",
-//             left: "calc(100% - 1.45em)",
-//             ease: "Elastic.easeOut(0.4)",
-//             duration: 0.6
-//         }).play();
-//     });
-    
-//     link.addEventListener("mouseleave", (e) => {
-//         // hoverlinkTL.reverse();
-//         let bubble = e.currentTarget.querySelector(".bubble");
-    
-//         hoverlinkTL.to(bubble, {
-//             width: "2em",
-//             left: "calc(100% - 1.45em)",
-//             ease: "Elastic.easeOut(0.4)",
-//             duration: 0.6
-//         }).reverse();
-    
-//         hoverlinkTL.to(bubble, {
-//             width: "calc(100% + 1.3em)",
-//             ease: "Elastic.easeOut(0.25)",
-//             duration: 0.4
-//         }).reverse();
-    
-    
-//     }); 
-// }
+    // showvalue.innerHTML = tab_input[scrollpos];
+    scroll(scrollpos);
+});
 
-// links.forEach((link) => {
-//         link.addEventListener("mouseenter", () => {
-//             hoverlinkTL.play();
-//         });
-      
-//         link.addEventListener("mouseleave", () => {
-//             hoverlinkTL.reverse();
-//         });  
-// })
 
-// // // ANIMATION DES LIENS
-// // // Variable pour stocker tous les liens
-// var links = document.querySelectorAll(".link")
-// // Variable pour stocker toutes les bulles des liens
-// var bubble = document.querySelectorAll(".bubble");
+// btnDown.addEventListener("click", function() {
+//     scrollpos--;
+//     console.log(scrollpos);
+//     if(scrollpos < 0 ) {
+//         scrollpos = scrollsections.length - 1;
+//     }
 
-// let hoverlinkTL = gsap.timeline();
-// hoverlinkTL.pause();
+//     // scrollsections[scrollpos].classList.add("active");
 
-// // Boucle pour savoir sur quels liens la souris passe en hover
-// hoverlinkTL.to(bubble, {
-//     width: "calc(100% + 1.3em)",
-//     ease: "Elastic.easeOut(0.25)",
-//     duration: 0.4
+//     // showvalue.innerHTML = tab_input[scrollpos];
 // });
-// hoverlinkTL.to(bubble, {
-//     width: "2em",
-//     left: "calc(100% - 1.45em)",
-//     ease: "Elastic.easeOut(0.4)",
-//     duration: 0.6
-// });
-  
-// links.addEventListener("mouseenter", () => {
-//     hoverlinkTL.play();
-// });
-  
-// links.addEventListener("mouseleave", () => {
-//     hoverlinkTL.reverse();
-// });    
 
-
-
-// // ANIMATION DES LIENS
-// // Variable pour stocker tous les liens
-// var links = document.querySelectorAll(".link");
-// // Variable pour stocker toutes les bulles des liens
-// let bubble = document.querySelectorAll(".bubble");
-// console.log(links);
-// console.log(bubble);
-
-// let hoverlinkTL = gsap.timeline();
-// hoverlinkTL.pause();
-
-// links.forEach(link => {
-//     link.addEventListener("mouseenter", (e) => {
-//         let bubble = e.currentTarget.querySelector(".bubble");
-
-//         hoverlinkTL.to(bubble, {
-//             width: "calc(100% + 1.3em)",
-//             ease: "Elastic.easeOut(0.25)",
-//             duration: 0.4
-//         }).play();
-    
-//         hoverlinkTL.to(bubble, {
-//             width: "2em",
-//             left: "calc(100% - 1.45em)",
-//             ease: "Elastic.easeOut(0.4)",
-//             duration: 0.6
-//         }).play();
-//     });
-    
-//     link.addEventListener("mouseleave", (e) => {
-//         // hoverlinkTL.reverse();
-//         let bubble = e.currentTarget.querySelector(".bubble");
-    
-//         hoverlinkTL.to(bubble, {
-//             width: "2em",
-//             left: "calc(100% - 1.45em)",
-//             ease: "Elastic.easeOut(0.4)",
-//             duration: 0.6
-//         }).reverse();
-    
-//         hoverlinkTL.to(bubble, {
-//             width: "calc(100% + 1.3em)",
-//             ease: "Elastic.easeOut(0.25)",
-//             duration: 0.4
-//         }).reverse();
-    
-    
-//     }); 
-// }) 
+// document.querySelector('#section_user').scrollIntoView();

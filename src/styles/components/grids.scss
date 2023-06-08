@@ -998,11 +998,11 @@
     
         &__subsubtitle {
             &--drink {
-                grid-area: 5 / 2 / 6 / 6;
+                grid-area: 9 / 6 / 10 / 10;
             }
     
             &--questions{
-                grid-area: 9 / 6 / 10 / 10;
+                grid-area: 5 / 2 / 6 / 6;
             }
         }
     
@@ -1016,13 +1016,13 @@
             &--explose {
                 justify-self: center; 
                 align-self: center; 
-                grid-area: 6 / 9 / 9 / 12; 
+                grid-area: 6/8/9/12;
             }
     
             &--drink {
                 justify-self: center; 
                 align-self: center; 
-                grid-area: 10 / 2 / 12 / 5; 
+                grid-area: 10/2/12/6;
             }
         }
     
