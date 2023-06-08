@@ -191,7 +191,7 @@ body::-webkit-scrollbar-thumb {
     display: block;
     position: absolute;
     left: calc(100% - 80px);
-    top : 12px;
+    top: 48px;
   }
 
 
@@ -291,12 +291,86 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.perspective {
+  padding:50px;
+  background:$color-block-third;
+  transform: translatez(50px);
+  transform-style: preserve-3d;
+
+  width:100%;
+  perspective: 700px;
+  -webkit-transform-style:flat; /* why would I do that? well there is a very strange bug with safari, and it fixed it... */
+  transform-style: preserve-3d;
+
+  &:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #196794;
+    top: -50px;
+    transform-origin: center bottom;
+    transform: rotatex(90deg);
+  }
+
+  &:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #196794;
+    bottom: -50px;
+    transform-origin: center top;
+    transform: rotatex(-90deg);
+  }
+}
+
+.perspectivebis {
+  padding:50px;
+  background:$color-block-third;
+  transform: translatez(50px);
+  transform-style: preserve-3d;
+
+  width:100%;
+  perspective: 700px;
+  -webkit-transform-style:flat; /* why would I do that? well there is a very strange bug with safari, and it fixed it... */
+  transform-style: preserve-3d;
+
+  &:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #083A5E;
+    top: -50px;
+    transform-origin: center bottom;
+    transform: rotatex(90deg);
+  }
+
+  &:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 50px;
+    background-color: #083A5E;
+    bottom: -50px;
+    transform-origin: center top;
+    transform: rotatex(-90deg);
+  }
+}
+
 //PAGE DE DOCUMENTATION 
 .userdoc {
   &__quoteblock {
     display: flex;
     flex-direction: column;
   }
+
+  
 
   &__quote {
     text-align: center;
@@ -342,6 +416,12 @@ body::-webkit-scrollbar-thumb {
       content: "»" ;
     }
   }
+
+  &__text {
+    &--javascript {
+      margin: 4rem 0 2em;
+    }
+  }
 }
 
 .hypothesesdoc {
@@ -357,8 +437,17 @@ body::-webkit-scrollbar-thumb {
   }
 
   &__img {
-    margin-bottom: -16px;
+    margin-bottom: -8px;
     z-index: 100;
+  }
+
+  &__text {
+    &--goal {
+      margin: 4em 0 2em;
+    }
+    &--friendly {
+      margin: 4em 0 2em;
+    }
   }
 }
 
@@ -419,6 +508,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.hypothesesdoc {
+  &__img {
+    margin-bottom: -16px;
+  }
+}
+
 }
 
 @media (min-width: 1024px) {
@@ -446,6 +541,16 @@ body::-webkit-scrollbar-thumb {
 .hypothesesdoc {
   &__quotecontainer {
     display: grid;
+  }
+
+  
+  &__text {
+    &--goal {
+      margin: 4em 0 4em 5%;
+    }
+    &--friendly {
+      margin: 4em 0 4em 5%;
+    }
   }
 }
 }
