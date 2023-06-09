@@ -248,3 +248,6 @@ let year = date.getFullYear();
 
 let yr = document.querySelector("#year");
 yr.innerHTML = "\u0040 " + year;
+
+var scroll = document.querySelector(".hero__btn--discover");
+scroll.scrollIntoView("#section_user");
