@@ -51,10 +51,11 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
 
-  &:hover {
-    border-bottom: #FCF3EE solid 2px;
-  }
+.hoverlink:hover {
+  border-bottom: #FCF3EE solid 2px;
 }
 
 small {
@@ -64,19 +65,25 @@ margin: $margin--small;
 }
 
 img {
-  width: 80%;
+  width: 90%;
   margin: 0em 10% 2rem;
+  justify-self: center;
 }
 
-// .button {
-//   font-size: $font-size-base;
-//   margin: $margin--button;
-//   height: 3em;
-//   border: 2px solid $color-button-primary;
-//   border-radius: 8px;
-//   color: $color-text-third;
-//   background-color: transparent;
-// }
+.button {
+  font-size: $font-size-base;
+  padding: 10px;
+  border: 2px solid $color-button-primary;
+  border-radius: 8px;
+  color: $color-text-secondary;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-background;
+    color: #083A5E;
+  }
+}
 
 .quote {
   font-size: $font-size-xxl;
@@ -202,7 +209,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
     margin: 6px 0px;
     transition: 0.5s;
-    background-color: $color-block;
+    background-color: $color-nav;
   }
 }
 
@@ -256,6 +263,9 @@ body::-webkit-scrollbar-thumb {
   & a {
     cursor: pointer;
   }
+  &--reverse span{
+    color: $color-text-secondary;
+  }
 }
 
 //HERO
@@ -272,6 +282,12 @@ body::-webkit-scrollbar-thumb {
     //   transform: scale(0.5);
     //   animation: arrowButton 3s infinite;
     // }
+  }
+}
+
+.user {
+  &__img {
+    width: 70%;
   }
 }
 
@@ -297,7 +313,7 @@ body::-webkit-scrollbar-thumb {
   transform: translatez(50px);
   transform-style: preserve-3d;
 
-  width:100%;
+  width:96%;
   perspective: 700px;
   -webkit-transform-style:flat; /* why would I do that? well there is a very strange bug with safari, and it fixed it... */
   transform-style: preserve-3d;
@@ -333,7 +349,7 @@ body::-webkit-scrollbar-thumb {
   transform: translatez(50px);
   transform-style: preserve-3d;
 
-  width:100%;
+  width:96%;
   perspective: 700px;
   -webkit-transform-style:flat; /* why would I do that? well there is a very strange bug with safari, and it fixed it... */
   transform-style: preserve-3d;
@@ -363,18 +379,47 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.problem {
+  &__img {
+    width: 100%;
+  }
+}
+
+.hypotheses {
+  &__img{
+    width: 70%;
+
+  }
+}
+
+.fonctionnality {
+  &__img {
+    width: 50%;
+  }
+}
+.study {
+  &__img {
+    width: 60%;
+  }
+}
+.presentation {
+  &__img {
+    width: 40%
+  }
+}
+
 //PAGE DE DOCUMENTATION 
 .userdoc {
   &__quoteblock {
     display: flex;
     flex-direction: column;
+    width: 96%;
   }
 
   
 
   &__quote {
     text-align: center;
-    
   }
 }
 
@@ -443,7 +488,7 @@ body::-webkit-scrollbar-thumb {
 
   &__text {
     &--goal {
-      margin: 4em 0 2em;
+      margin: 4em 0 4em;
     }
     &--friendly {
       margin: 4em 0 2em;
@@ -464,10 +509,14 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     width: 20%;
     opacity: 0;
+    margin: 4rem 10% 2rem;
 
     & :nth-child(1) {
       opacity: 1;
     }
+  }
+  &__el {
+    list-style: circle;
   }
 }
 
@@ -475,6 +524,43 @@ body::-webkit-scrollbar-thumb {
   &__subtitle {
     margin-bottom: 0em;
   }
+}
+
+footer {
+  position: static;
+  background-color: $color-block;
+  color: $color-text-secondary;
+  padding-top: 1px;
+  margin-top: 48px;
+  width: 100%;
+}
+
+.footerList{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 36px 18px;
+}
+
+.header__el, .footerList{
+  list-style: none;
+}
+
+.credits{
+  display: flex;
+  margin-top: 18px;
+  justify-content: space-evenly;
+}
+
+.logoDWT {
+  width: 50px;
+  height: 50px;
+  margin-top: -20px;
+}
+
+.linkfooter{
+  color: $color-text-secondary;
 }
 
 //VERSION TABLETTE
@@ -491,7 +577,7 @@ body::-webkit-scrollbar-thumb {
 
     &__burger {
       left: 10%;
-      top: 5%;
+      top: 48px;
     }
   }
 
@@ -501,16 +587,47 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 
-.problemdoc {
-  &__img {
-    margin-bottom: -120px;
-    z-index: 100;
+  .problem{
+    &__img{
+      width: 80%;
+    }
   }
-}
 
-.hypothesesdoc {
+  .presentation {
+    &__img {
+      width: 70%;
+    }
+  }
+
+  .problemdoc {
+    &__img {
+      margin-bottom: -120px;
+      z-index: 100;
+    }
+  }
+
+  .hypothesesdoc {
+    &__img {
+      margin-bottom: -16px;
+    }
+  }
+
+.fonctionalitydoc {
+  &__rank {
+    width: 10%;
+  }
+
+  &__rankinglist {
+    padding-left: 18%;
+    // height: 200px;
+    background-color: $color-block-third;
+  }
+
   &__img {
-    margin-bottom: -16px;
+    &--blario{
+      width: 60%;
+      z-index: 100;
+    }
   }
 }
 
@@ -518,14 +635,51 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 1024px) {
   .navigation {
+    background: transparent;
     &__container {
-        width: 18%;
-        left: 0;
+      width: 18%;
+      left: 0;
     }
 
     &__burger{
         display: none;
     }
+}
+
+.user {
+  &__img {
+    width: 30%;
+  }
+}
+
+.problem {
+  &__img {
+    width: 50%;
+  }
+}
+
+.hypotheses {
+  &__img {
+    width: 35%;
+  }
+}
+
+.fonctionnality {
+  &__img {
+    width: 30%;
+  }
+}
+
+.study {
+  &__img {
+    width: 30%;
+  }
+}
+
+.presentation {
+  &__img {
+    width: 40%;
+  }
 }
 
 .problemdoc {
@@ -546,10 +700,18 @@ body::-webkit-scrollbar-thumb {
   
   &__text {
     &--goal {
-      margin: 4em 0 4em 5%;
+      margin: 4em 0 4em;
     }
     &--friendly {
-      margin: 4em 0 4em 5%;
+      margin: 4em 0 4em;
+    }
+  }
+}
+
+.fonctionalitydoc {
+  &__img {
+    &__blario {
+      width: 40%;
     }
   }
 }

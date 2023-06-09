@@ -19,7 +19,7 @@
 
     &__btn {
         &--documentation {
-            grid-area: 4 / 2 / 5 / 7;
+            grid-area: 4 / 2 / 5 / 8;
             justify-self: center;
         }
 
@@ -46,6 +46,7 @@
 
     &__img {
         grid-area: 3 / 3 / 4 / 6;
+        justify-self: center;
     }
 
     &__text {
@@ -59,7 +60,7 @@
     }
 
     &__btn {
-        grid-area: 6 / 3 / 7 / 6;
+        grid-area: 6 / 2 / 7 / 6;
     }
 }
 
@@ -79,6 +80,7 @@
 
     &__img {
         grid-area: 3 / 3 / 4 / 6;
+        justify-self: center;
     }
 
     &__text {
@@ -92,7 +94,7 @@
     }
 
     &__btn {
-        grid-area: 6 / 3 / 7 / 6;
+        grid-area: 6 / 2 / 7 / 6;
     }
 }
 
@@ -112,6 +114,7 @@
 
     &__img {
         grid-area: 3 / 3 / 4 / 6;
+        justify-self: center;
     }
 
     &__text {
@@ -125,7 +128,7 @@
     }
 
     &__btn {
-        grid-area: 6 / 3 / 7 / 6;
+        grid-area: 6 / 2 / 7 / 6;
     }
 }
 
@@ -144,6 +147,7 @@
 
     &__img {
         grid-area: 3 / 3 / 4 / 6;
+        justify-self: center;
     }
 
     &__text {
@@ -162,7 +166,7 @@
     }
 
     &__btn {
-        grid-area: 7 / 3 / 8 / 6;
+        grid-area: 7 / 2 / 8 / 6;
     }
 }
 
@@ -182,6 +186,7 @@
 
     &__img {
         grid-area: 3 / 3 / 4 / 6;
+        justify-self: center;
     }
 
     &__text {
@@ -189,7 +194,7 @@
     }
 
     &__btn {
-        grid-area: 5 / 3 / 6 / 6;
+        grid-area: 5 / 2 / 6 / 6;
     }
 }
 
@@ -213,6 +218,7 @@
 
     &__img {
         grid-area: 4 / 2 / 5 / 7;
+        justify-self: center;
     }
 
     &__text {
@@ -220,7 +226,7 @@
     }
 
     &__btn {
-        grid-area: 6 / 3 / 7 / 6;
+        grid-area: 6 / 2 / 7 / 6;
     }
 }
 
@@ -389,7 +395,6 @@
 
     &__quoteblock {
         grid-area: 16/1/17/6;
-        width: 96%;
     }
 
     &__quote {
@@ -460,6 +465,8 @@
 
     &__img {
         grid-area: 4 / 1 / 5 / 4;
+        justify-self: center;
+        width: 60%;
     }
 }
 
@@ -492,7 +499,7 @@
 
     &__quotecontainer {
         grid-area: 5/1/6/8;
-        width: 90%;
+        width: 85%;
         justify-self: center;
     }
 }
@@ -566,7 +573,7 @@
     }
 
     &__rankinglist {
-        grid-area: 9 / 1 / 10 / 8;
+        grid-area: 9/1/10/6;
     }
 
     &__line {
@@ -719,6 +726,48 @@
         &--ending {
             grid-area: 7 / 2 / 8 / 7;
         }
+    }
+}
+
+.credit {
+    display: grid; 
+    grid-template-columns: 10% 0.4fr 3.2fr 10%; 
+    gap: 0px 8px; 
+
+    &__title {
+        grid-area: 1 / 2 / 2 / 4;
+    }
+
+    &__subtitle {
+        &--credit{
+            grid-area: 2 / 2 / 3 / 4;
+        }
+
+        &--thank{
+            grid-area: 4 / 2 / 5 / 4;
+            margin-top: 4rem;
+        }
+    }
+
+    &__list {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+
+    &__text {
+
+        &--thank {
+            grid-area: 5 / 3 / 6 / 4;
+        }
+
+        &--think {
+            grid-area: 6 / 3 / 7 / 4;
+        }
+
+    }
+
+    &__back {
+        justify-self: end; 
+        grid-area: 7 / 3 / 8 / 4;
     }
 }
 
@@ -1069,7 +1118,7 @@
         }
 
         &__quoteblock {
-            grid-area: 12/1/13/13;
+            grid-area: 12/1/13/11;
     
             display: grid; 
             grid-template-columns: 0.3fr 5fr 0.3fr; 
@@ -1216,8 +1265,7 @@
     
             &--blario {
                 justify-self: center; 
-                align-self: center; 
-                grid-area: 6 / 8 / 8 / 12; 
+                grid-area: 6/8/7/12; 
             }
         }
     
@@ -1231,7 +1279,7 @@
             }
     
             &--hierarchy {
-                grid-area: 7 / 2 / 8 / 8;
+                grid-area: 6/2/7/8;
             }
     
             &--help {
@@ -1252,7 +1300,7 @@
         }
     
         &__rankinglist {
-            grid-area: 8 / 1 / 9 / 13;
+            grid-area: 7/1/8/10;
         }
     
         &__line {
@@ -1447,5 +1495,19 @@
         &__quote {
             grid-area: 1 / 2 / 2 / 3;
         }
+    }
+
+    .footer {
+        display: grid; 
+        grid-template-columns: 20% 10fr 0.5fr; 
+        gap: 0px 0px;
+    }
+
+    .footerList {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .credits {
+        grid-area: 2 / 2 / 3 / 3;
     }
 }

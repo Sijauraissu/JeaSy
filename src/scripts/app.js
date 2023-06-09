@@ -50,7 +50,7 @@ document.querySelectorAll(".navigation__link").forEach((link) =>
 
 //TIMER
 //Création de la date de fin
-var deadline = new Date ("jun 9, 2023 23:59:59").getTime();
+var deadline = new Date ("jun 15, 2023 15:00:00").getTime();
 //Fonction pour rafraîchir le timer toutes les secondes
 setInterval(() => {
     //Récupération de la date actuelle
@@ -216,7 +216,7 @@ perspectiveanimation.forEach(perspective =>{
             scrub: true,
             start: "top bottom",
             end: "bottom 30%",
-            markers:true
+            markers:false
           },
     });
 
@@ -235,9 +235,16 @@ perspectiveanimationbis.forEach(perspective =>{
             scrub: true,
             start: "top bottom",
             end: "bottom 30%",
-            markers:true
+            markers:false
           },
     });
 
     tl.to(perspective, {perspectiveOrigin: "center 100vh", ease: "none"});
 });
+
+//Obtention de la date pour le footer
+let date = new Date();
+let year = date.getFullYear();
+
+let yr = document.querySelector("#year");
+yr.innerHTML = "\u0040 " + year;
